@@ -22,7 +22,7 @@ def problematic_dict(key, value, my_dict={}):
 
 def test_mutable_defaults_persist():
     """Test that mutable defaults persist between calls (demonstrating the problem)."""
-    result1 = problematic_set("a")
+    problematic_set("a")
     result2 = problematic_set("b")
     
     # The second call should contain both items due to persistence
