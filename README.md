@@ -100,3 +100,23 @@ Type checkers like mypy will understand that after the `None` check, the variabl
 - **Use `None` as default** and create the object inside the function
 - **Use union types** (`T | None`) for proper type hints
 - **Always check for `None`** before using the parameter
+
+## Running the Examples
+
+```bash
+# Install dependencies
+uv sync --group dev
+
+# Run the demonstration scripts
+uv run python mutable_defaults_demo.py
+uv run python typed_mutable_defaults.py
+
+# Run tests to verify behavior
+uv run pytest test_examples.py -v
+
+# Type check the code
+uv run mypy *.py
+
+# Lint the code
+uv run ruff check *.py
+```
